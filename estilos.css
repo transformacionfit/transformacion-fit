@@ -23,18 +23,17 @@ body {
 }
 
 .logo-fixed img {
-    width: 150px;
+    width: 140px;
 }
 
 /* ================= HERO ================= */
 .hero {
-    min-height: 100vh;
+    min-height: 100svh;
     background:
         linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-        url("img/portada.jpg");
+        url("img/portada.jpg") no-repeat center center;
     background-size: cover;
-    background-position: center;
-    padding: 110px 80px;
+    padding: 120px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +75,7 @@ body {
 
 /* ================= CARDS ================= */
 .cards {
-    padding: 80px 60px;
+    padding: 80px 40px;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -106,7 +105,7 @@ body {
     color: #ccc;
 }
 
-/* ================= PRODUCTOS MARKETING ================= */
+/* ================= PRODUCTOS ================= */
 .productos-marketing {
     display: flex;
     justify-content: center;
@@ -116,7 +115,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* VIANDAS */
 .viandas {
     width: 260px;
     max-width: 100%;
@@ -124,7 +122,6 @@ body {
     transform: rotate(4deg);
 }
 
-/* LIBRO DESAFÍO 21 DÍAS (más grande) */
 .libro {
     width: 290px;
     max-width: 100%;
@@ -134,7 +131,7 @@ body {
 
 /* ================= PLANES ================= */
 .planes {
-    padding: 50px 40px 100px;
+    padding: 60px 40px 100px;
     background: #0e0e0e;
     text-align: center;
 }
@@ -145,7 +142,7 @@ body {
 
 .planes-sub {
     color: #ccc;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .planes-grid {
@@ -161,7 +158,6 @@ body {
     padding: 35px 28px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,.7);
-    position: relative;
 }
 
 .plan-img {
@@ -170,49 +166,15 @@ body {
     margin-bottom: 18px;
 }
 
-.plan-destacado {
-    border: 2px solid #00e676;
-    transform: scale(1.05);
-}
-
-.badge {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #00e676;
-    color: #000;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: .75rem;
-    font-weight: bold;
-}
-
 .precio {
     font-size: 2.3rem;
     color: #00e676;
-}
-
-.ahorro {
-    color: #00e676;
-    margin-bottom: 15px;
 }
 
 .plan-card ul {
     list-style: none;
     text-align: left;
     margin: 25px 0;
-}
-
-.no-incluye {
-    color: #777;
-    text-decoration: line-through;
-}
-
-.frase-cierre {
-    margin-top: 100px;
-    font-size: 1.1rem;
-    color: #ccc;
 }
 
 /* ================= WHATSAPP ================= */
@@ -231,41 +193,20 @@ body {
     z-index: 9999;
 }
 
-.whatsapp-btn img {
-    width: 34px;
-    height: 34px;
-}
-
 .whatsapp-btn:hover {
     transform: scale(1.1);
     transition: 0.2s ease;
 }
 
-/* ================= BACK TO TOP ================= */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 95px;
-    background: #00e676;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ================= TESTIMONIOS ================= */
 .testimonios {
-    padding: 90px 40px;
+    padding: 80px 30px;
     background: #000;
     text-align: center;
 }
 
 .testimonios h2 {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 2.2rem;
 }
 
@@ -283,17 +224,11 @@ body {
     border-radius: 22px;
     box-shadow: 0 18px 35px rgba(0,0,0,.6);
     text-align: left;
-    transition: .3s;
-}
-
-.testimonio:hover {
-    transform: translateY(-6px);
 }
 
 .testimonio p {
     color: #ddd;
     font-style: italic;
-    line-height: 1.5;
 }
 
 .testimonio span {
@@ -301,42 +236,48 @@ body {
     margin-top: 15px;
     color: #00e676;
     font-weight: bold;
-    font-size: .9rem;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= RESPONSIVE MOBILE ================= */
 @media (max-width: 768px) {
+
+    .logo-fixed {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .hero {
-        padding: 70px 25px;
+        padding: 95px 22px 60px;
+        text-align: center;
+        background-position: center top;
     }
 
     .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
+        max-width: 100%;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .viandas,
+    .libro {
+        transform: none;
     }
 
     .planes-sub {
-        margin-bottom: 70px;
-    }
-
-    .frase-cierre {
-        margin-top: 70px;
-    }
-
-    .plan-destacado {
-        transform: none;
-    }
-
-    .productos-marketing {
-        gap: 30px;
-    }
-
-    .viandas {
-        width: 220px;
-        transform: none;
-    }
-
-    .libro {
-        width: 245px;
-        transform: none;
+        margin-bottom: 60px;
     }
 }
