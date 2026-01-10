@@ -182,9 +182,12 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 1.5cm;
-    height: 1.5cm;
+    width: 56px;
+    height: 56px;
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whatsapp-btn img {
@@ -249,6 +252,8 @@ body {
     .hero {
         padding: 95px 22px 60px;
         text-align: center;
+
+        /* PORTADA MOBILE: PAREJA ARRIBA Y CENTRADA */
         background-position: center top;
     }
 
