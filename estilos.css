@@ -252,9 +252,7 @@ body {
     .hero {
         padding: 95px 22px 60px;
         text-align: center;
-
-        /* PORTADA MOBILE: PAREJA ARRIBA Y CENTRADA */
-        background-position: center top;
+        background-position: 38% top; /* 👈 pareja centrada */
     }
 
     .hero h1 {
