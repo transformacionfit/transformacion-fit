@@ -116,19 +116,20 @@ body {
     flex-wrap: wrap;
 }
 
-.libro,
+/* VIANDAS */
 .viandas {
     width: 260px;
     max-width: 100%;
     filter: drop-shadow(0 20px 35px rgba(0,0,0,.6));
-}
-
-.libro {
-    transform: rotate(-6deg);
-}
-
-.viandas {
     transform: rotate(4deg);
+}
+
+/* LIBRO DESAFÍO 21 DÍAS (más grande) */
+.libro {
+    width: 290px;
+    max-width: 100%;
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,.6));
+    transform: rotate(-6deg);
 }
 
 /* ================= PLANES ================= */
@@ -160,6 +161,7 @@ body {
     padding: 35px 28px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,.7);
+    position: relative;
 }
 
 .plan-img {
@@ -168,9 +170,32 @@ body {
     margin-bottom: 18px;
 }
 
+.plan-destacado {
+    border: 2px solid #00e676;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00e676;
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
 .precio {
     font-size: 2.3rem;
     color: #00e676;
+}
+
+.ahorro {
+    color: #00e676;
+    margin-bottom: 15px;
 }
 
 .plan-card ul {
@@ -182,6 +207,54 @@ body {
 .no-incluye {
     color: #777;
     text-decoration: line-through;
+}
+
+.frase-cierre {
+    margin-top: 100px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.whatsapp-btn img {
+    width: 34px;
+    height: 34px;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+/* ================= BACK TO TOP ================= */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 95px;
+    background: #00e676;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ================= TESTIMONIOS ================= */
@@ -209,6 +282,7 @@ body {
     padding: 28px;
     border-radius: 22px;
     box-shadow: 0 18px 35px rgba(0,0,0,.6);
+    text-align: left;
     transition: .3s;
 }
 
@@ -219,6 +293,7 @@ body {
 .testimonio p {
     color: #ddd;
     font-style: italic;
+    line-height: 1.5;
 }
 
 .testimonio span {
@@ -226,27 +301,7 @@ body {
     margin-top: 15px;
     color: #00e676;
     font-weight: bold;
-}
-
-/* ================= WHATSAPP ================= */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,.3);
-    z-index: 9999;
-    transition: transform .2s ease;
-}
-
-.whatsapp-btn:hover {
-    transform: scale(1.1);
+    font-size: .9rem;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -263,13 +318,25 @@ body {
         margin-bottom: 70px;
     }
 
+    .frase-cierre {
+        margin-top: 70px;
+    }
+
+    .plan-destacado {
+        transform: none;
+    }
+
     .productos-marketing {
         gap: 30px;
     }
 
-    .libro,
     .viandas {
         width: 220px;
+        transform: none;
+    }
+
+    .libro {
+        width: 245px;
         transform: none;
     }
 }
