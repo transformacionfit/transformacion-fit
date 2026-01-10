@@ -116,11 +116,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* MISMO TAMAÑO PARA LIBRO Y VIANDAS */
 .libro,
 .viandas {
     width: 260px;
-    height: auto;
     max-width: 100%;
     filter: drop-shadow(0 20px 35px rgba(0,0,0,.6));
 }
@@ -162,7 +160,6 @@ body {
     padding: 35px 28px;
     border-radius: 22px;
     box-shadow: 0 20px 40px rgba(0,0,0,.7);
-    position: relative;
 }
 
 .plan-img {
@@ -171,32 +168,9 @@ body {
     margin-bottom: 18px;
 }
 
-.plan-destacado {
-    border: 2px solid #00e676;
-    transform: scale(1.05);
-}
-
-.badge {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #00e676;
-    color: #000;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: .75rem;
-    font-weight: bold;
-}
-
 .precio {
     font-size: 2.3rem;
     color: #00e676;
-}
-
-.ahorro {
-    color: #00e676;
-    margin-bottom: 15px;
 }
 
 .plan-card ul {
@@ -210,74 +184,6 @@ body {
     text-decoration: line-through;
 }
 
-.frase-cierre {
-    margin-top: 100px;
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-/* ================= WHATSAPP ================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: #25d366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ================= BACK TO TOP ================= */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 95px;
-    background: #00e676;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .hero {
-        padding: 70px 25px;
-    }
-
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
-    .planes-sub {
-        margin-bottom: 70px;
-    }
-
-    .frase-cierre {
-        margin-top: 70px;
-    }
-
-    .plan-destacado {
-        transform: none;
-    }
-
-    .productos-marketing {
-        gap: 30px;
-    }
-
-    .libro,
-    .viandas {
-        width: 220px;
-        transform: none;
-    }
-}
 /* ================= TESTIMONIOS ================= */
 .testimonios {
     padding: 90px 40px;
@@ -303,7 +209,6 @@ body {
     padding: 28px;
     border-radius: 22px;
     box-shadow: 0 18px 35px rgba(0,0,0,.6);
-    text-align: left;
     transition: .3s;
 }
 
@@ -314,7 +219,6 @@ body {
 .testimonio p {
     color: #ddd;
     font-style: italic;
-    line-height: 1.5;
 }
 
 .testimonio span {
@@ -322,51 +226,50 @@ body {
     margin-top: 15px;
     color: #00e676;
     font-weight: bold;
-    font-size: .9rem;
-}
-/* ================= BOTÓN PREMIUM ================= */
-.btn-premium {
-    display: inline-block;
-    position: relative;
-    background: url('img/fondo-premium.png') no-repeat center/cover; /* Imagen de fondo del botón */
-    padding: 15px 25px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 25px;
 }
 
-/* Hover */
-.btn-premium:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-
+/* ================= WHATSAPP ================= */
 .whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  width: 60px;
-  height: 60px;
-
-  background-color: #25D366; /* VERDE WHATSAPP */
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    z-index: 9999;
+    transition: transform .2s ease;
 }
 
 .whatsapp-btn:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease;
+    transform: scale(1.1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero {
+        padding: 70px 25px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .planes-sub {
+        margin-bottom: 70px;
+    }
+
+    .productos-marketing {
+        gap: 30px;
+    }
+
+    .libro,
+    .viandas {
+        width: 220px;
+        transform: none;
+    }
 }
