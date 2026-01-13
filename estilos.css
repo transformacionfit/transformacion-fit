@@ -23,7 +23,8 @@ body {
 }
 
 .logo-fixed img {
-    width: 140px;
+    width: 280px; /* 🔥 LOGO AL DOBLE */
+    height: auto;
 }
 
 /* ================= HERO ================= */
@@ -249,10 +250,14 @@ body {
         transform: translateX(-50%);
     }
 
+    .logo-fixed img {
+        width: 200px; /* 📱 LOGO AJUSTADO PARA MÓVIL */
+    }
+
     .hero {
         padding: 95px 22px 60px;
         text-align: center;
-        background-position: 38% top; /* 👈 pareja centrada */
+        background-position: 38% top;
     }
 
     .hero h1 {
@@ -284,7 +289,8 @@ body {
         margin-bottom: 60px;
     }
 }
-/* ===== PORTADA EXCLUSIVA PARA APP MÓVIL (SIN ROMPER DESKTOP) ===== */
+
+/* ===== PORTADA EXCLUSIVA PARA APP MÓVIL ===== */
 @media (max-width: 768px) {
     .hero {
         background-image:
@@ -294,3 +300,4 @@ body {
         background-size: cover;
     }
 }
+
